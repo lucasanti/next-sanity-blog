@@ -15,3 +15,8 @@ Create a new project, select the blog schema template.
 
 `sanity start`
 
+## Install Next.js
+Inside web folder: 
+
+`npx create-next-app@latest`
+
