@@ -49,3 +49,18 @@ Accessing data by: `"imageUrl": author->image.asset->url`
 
 ## PortableText
 In web folder `npm install @portabletext/react`
+
+## Add Code block to PortableText
+In studio folder `sanity install @sanity/code-input`, then in `schemas/blockContent.js` add a Code schema like this: 
+```javascript
+{
+      title: 'Code',
+      name: 'code',
+      type: 'code',
+      options: {
+        theme: 'solarized_dark'
+      }
+      
+    }, 
+```
+In web folder `npm install react-syntax-highlighter --save` or any other Syntax Highlighter, then add this new type and components

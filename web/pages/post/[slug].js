@@ -1,7 +1,13 @@
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
+
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
 import client from '../../client'
+
+import styles from '../../styles/Home.module.css'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -20,6 +26,9 @@ const ptComponents = {
           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
         />
       )
+    },
+    code: ({ value }) => {
+      return <SyntaxHighlighter language={value.language} style={vscDarkPlus}>{value.code}</SyntaxHighlighter>
     }
   }
 }
@@ -34,7 +43,7 @@ const Post = ({post}) => {
     body = []
   } = post
   return (
-    <article>
+    <article className={styles.article}>
       <h1>{title}</h1>
       <span>By {name}</span>
       {categories && (
