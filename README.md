@@ -2,9 +2,9 @@
 Testing Headless blogging with Sanity Studio and Next.js Client
 
 ### Folder structure
-```~/projects/Blog
+~/projects/Blog
         ├── studio
-        └── web``` 
+        └── web
 
 ## Install Sanity and use Blog Schema
 Inside studio folder:
