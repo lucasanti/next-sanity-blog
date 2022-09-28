@@ -34,9 +34,15 @@ export default sanityClient({
 
 
 ## Get content from Sanity
-Start creating `post.js` or `[slug].js` by using `getStaticProps` and `getStaticPaths`
+Start creating `post.js` or `[slug].js` and get data by using `getStaticProps` and `getStaticPaths`.
 
 Add **CORS Settings** in order to add `http://localhost:3000` or `http://custom.domain` to Sanity's origin
 
 ### Install groq
 in web folder `npm install groq`
+
+
+## Images
+
+In web folder `npm i @sanity/image-url`
+Accessing data by: `"imageUrl": author->image.asset->url`
