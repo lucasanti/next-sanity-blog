@@ -46,3 +46,6 @@ in web folder `npm install groq`
 
 In web folder `npm i @sanity/image-url`
 Accessing data by: `"imageUrl": author->image.asset->url`
+
+## PortableText
+In web folder `npm install @portabletext/react`
